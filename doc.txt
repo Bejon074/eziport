@@ -1,0 +1,119 @@
+
+
+Api address : localhost:8080/post-transfer
+
+sample request: 
+{
+	"countryFrom" : "Estonia",
+	"countryTo" : "India",
+	"date" : "1618029036",
+	"weight" : 15,
+	"username" : "dummyTransfere"
+}
+
+sample response: 
+Information Saved Successfully
+
+
+Api address: localhost:8080/get-transferer
+
+sample request: 
+{
+		"countryFrom" : "Estonia",
+		"countryTo" : "India",
+		"date" : "1718029036"
+}
+
+sample response:
+
+{
+    "content": [
+        {
+            "transferId": 1,
+            "countryFrom": "Estonia",
+            "countryTo": "India",
+            "date": 1618029036,
+            "weight": 15,
+            "status": "NOT_BOOKED",
+            "username": "dummyTransfere"
+        }
+    ],
+    "last": true,
+    "totalPages": 1,
+    "totalElements": 1,
+    "size": 20,
+    "number": 0,
+    "sort": [
+        {
+            "direction": "ASC",
+            "property": "date",
+            "ignoreCase": false,
+            "nullHandling": "NATIVE",
+            "ascending": true,
+            "descending": false
+        }
+    ],
+    "first": true,
+    "numberOfElements": 1
+}
+
+Api address: localhost:8080/book-package/1
+
+sample request: 
+{
+	"destination"  : "demo destination",
+	"weight" : 8, 
+	"title" : "title of the package",
+	"packageDetail" : "description of the package",
+	"username" : "demoSender"
+}
+
+sample Response:
+Request Saved Successfully
+
+api : localhost:8080/get_bookings
+
+As a get parameter you can send username, dateFrom, dateTo, status. Back end will filter that.
+
+sample request : localhost:8080/get_bookings?username=demoSender
+
+sample response: 
+{
+    "content": [
+        {
+            "sendId": 1,
+            "destination": "demo destination",
+            "countryFrom": "Estonia",
+            "countryTo": "India",
+            "weight": 8,
+            "date": 1518040949489,
+            "packageDetail": "description of the package",
+            "title": "title of the package",
+            "username": "demoSender",
+            "status": null,
+            "transfer": null
+        }
+    ],
+    "last": true,
+    "totalElements": 1,
+    "totalPages": 1,
+    "size": 20,
+    "number": 0,
+    "sort": [
+        {
+            "direction": "ASC",
+            "property": "date",
+            "ignoreCase": false,
+            "nullHandling": "NATIVE",
+            "ascending": true,
+            "descending": false
+        }
+    ],
+    "first": true,
+    "numberOfElements": 1
+}
+
+api: localhost:8080//update-booking/1/APPROVED
+
+response: Status Successfull Updated
+
