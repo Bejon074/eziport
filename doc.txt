@@ -12,7 +12,9 @@ sample request:
 }
 
 sample response: 
-Information Saved Successfully
+{
+	"message": "Information Saved Successfully"
+}
 
 
 Api address: localhost:8080/get-transferer
@@ -69,7 +71,9 @@ sample request:
 }
 
 sample Response:
-Request Saved Successfully
+{
+	"message": "Request Saved Successfully"
+}
 
 api : localhost:8080/get_bookings
 
@@ -115,5 +119,8 @@ sample response:
 
 api: localhost:8080//update-booking/1/APPROVED
 
-response: Status Successfull Updated
+response: 
 
+{
+	"message": "Status Successfull Updated"
+}
