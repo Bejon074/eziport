@@ -124,3 +124,65 @@ response:
 {
 	"message": "Status Successfull Updated"
 }
+
+
+api: localhost:8080//transfers?username=dummyTransfere
+
+sample response: 
+
+{
+    "content": [
+        {
+            "transferId": 1,
+            "countryFrom": "Estonia",
+            "countryTo": "India",
+            "date": 1618029036,
+            "weight": 15,
+            "status": "NOT_BOOKED",
+            "username": "dummyTransfere",
+            "sendingList": [
+                {
+                    "sendId": 1,
+                    "destination": "demo destination",
+                    "countryFrom": "Estonia",
+                    "countryTo": "India",
+                    "weight": 7,
+                    "date": 1518040949489,
+                    "packageDetail": "description of the package",
+                    "title": "title of the package",
+                    "username": "demoSender",
+                    "status": "VERIFIED"
+                },
+                {
+                    "sendId": 33,
+                    "destination": "demo destination",
+                    "countryFrom": "Estonia",
+                    "countryTo": "India",
+                    "weight": 8,
+                    "date": 1518081884208,
+                    "packageDetail": "description of the package",
+                    "title": "title of the package",
+                    "username": "demoSender",
+                    "status": "PENDING"
+                }
+            ]
+        }
+    ],
+    "last": true,
+    "totalPages": 1,
+    "totalElements": 1,
+    "size": 20,
+    "number": 0,
+    "sort": [
+        {
+            "direction": "ASC",
+            "property": "date",
+            "ignoreCase": false,
+            "nullHandling": "NATIVE",
+            "ascending": true,
+            "descending": false
+        }
+    ],
+    "first": true,
+    "numberOfElements": 1
+}
